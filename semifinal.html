@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Rayver Pitogo | Web Design Portfolio</title>
+
+<style>
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+gap:40px;
+padding:15px;
+z-index:1000;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+
+}
+
+nav a:hover{
+color:#00eaff;
+}
+
+/* SECTION */
+
+section{
+
+min-height:100vh;
+padding:120px 10%;
+}
+
+/* HOME */
+
+#home{
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+#home h1{
+
+font-size:60px;
+margin-bottom:20px;
+
+}
+
+#home p{
+
+font-size:22px;
+opacity:0.8;
+
+}
+
+/* ABOUT */
+
+#about{
+
+background:white;
+color:black;
+text-align:center;
+
+}
+
+.profile-card{
+
+background:#f4f4f4;
+width:300px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+.profile-card img{
+
+width:150px;
+border-radius:10px;
+margin-bottom:15px;
+
+}
+
+/* ACTIVITIES */
+
+#activities{
+
+background:#ecf0f1;
+color:black;
+
+}
+
+.activity-box{
+
+background:white;
+margin:30px 0;
+padding:20px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+.activity-box h2{
+
+margin-bottom:15px;
+
+}
+
+.buttons{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+
+}
+
+.buttons button{
+
+padding:10px 15px;
+border:none;
+border-radius:6px;
+background:#3498db;
+color:white;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+.buttons button:hover{
+
+background:#2980b9;
+transform:scale(1.05);
+
+}
+
+/* FAVORITES */
+
+#favorites{
+
+text-align:center;
+
+}
+
+#favorites ul{
+
+list-style:none;
+
+}
+
+#favorites li{
+
+margin:10px;
+font-size:18px;
+
+}
+
+/* CALENDAR */
+
+#calendar{
+
+background:white;
+color:black;
+text-align:center;
+
+}
+
+table{
+
+margin:auto;
+border-collapse:collapse;
+
+}
+
+td,th{
+
+border:1px solid black;
+padding:10px 20px;
+
+}
+
+/* MODAL */
+
+.modal{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:2000;
+
+}
+
+.modal-content{
+
+background:white;
+color:black;
+width:80%;
+margin:5% auto;
+padding:30px;
+border-radius:10px;
+
+}
+
+.close{
+
+float:right;
+font-size:28px;
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#home">HOME</a>
+<a href="#about">ABOUT ME</a>
+<a href="#activities">ACTIVITIES</a>
+<a href="#favorites">FAVORITE WEBSITES</a>
+<a href="#calendar">CALENDAR</a>
+
+</nav>
+
+<!-- HOME -->
+
+<section id="home">
+
+<h1>Welcome to My Portfolio</h1>
+
+<p>ITC122 - Introduction to Web Design</p>
+<p>Rayver Pitogo | BSIT Student</p>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h1>About Me</h1>
+
+<div class="profile-card">
+
+<img src="yourphoto.jpg">
+
+<h2>Rayver Pitogo</h2>
+
+<p>
+
+I am a BSIT student who enjoys learning web design, programming, and technology.
+I like creating websites and exploring modern digital tools.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+
+<h1>My Activities</h1>
+
+<!-- HTML PRELIM -->
+
+<div class="activity-box">
+
+<h2>HTML Prelim Activities</h2>
+
+<div class="buttons" id="prelim"></div>
+
+</div>
+
+<!-- HTML MIDTERM -->
+
+<div class="activity-box">
+
+<h2>HTML Midterm Activities</h2>
+
+<div class="buttons" id="midterm"></div>
+
+</div>
+
+<!-- CSS PART 1 -->
+
+<div class="activity-box">
+
+<h2>CSS Semi-Final Activities Part 1</h2>
+
+<div class="buttons" id="css1"></div>
+
+</div>
+
+<!-- CSS PART 2 -->
+
+<div class="activity-box">
+
+<h2>CSS Semi-Final Activities Part 2</h2>
+
+<div class="buttons" id="css2"></div>
+
+</div>
+
+<!-- JS -->
+
+<div class="activity-box">
+
+<h2>JavaScript Final Activities</h2>
+
+<div class="buttons" id="js"></div>
+
+</div>
+
+</section>
+
+<!-- FAVORITES -->
+
+<section id="favorites">
+
+<h1>My Favorite Websites</h1>
+
+<ul>
+
+<li>YouTube</li>
+<li>Google</li>
+<li>Facebook</li>
+<li>Instagram</li>
+<li>Netflix</li>
+<li>Spotify</li>
+<li>Wikipedia</li>
+<li>GitHub</li>
+<li>TikTok</li>
+<li>Amazon</li>
+
+</ul>
+
+</section>
+
+<!-- CALENDAR -->
+
+<section id="calendar">
+
+<title>2026 Philippine Calendar</title>
+</head>
+
+<body background = "BG.jpg"  text="#000000" style="background-repeat:no-repeat; background-position:center; background-size:cover;">
+
+
+<center>
+<img src="top.jpg" width="900" height="300" alt="Calendar Header">
+<h5>created by: Rayver P. Pitogo</h5>
+</center>
+
+<hr>
+
+<center>
+<h2>JANUARY 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td></td><td></td><td></td><td></td>
+<td align="center" width="120" height="100"> <br><img src="ny.png" width="100%" height="100%" alt=""> <br></td>
+<td align="center">2</td><td align="center">3</td></tr>
+<tr><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td></tr>
+<tr><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td></tr>
+<tr><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td></tr>
+<tr><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td align="center">31</td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>FEBRUARY 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td align="center">1</td><td align="center">2</td>
+<td align="center" width="120" height="100"> <br><img src="chi.jpg" width="100%" height="100%" alt=""> <br></td>
+
+<td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td></tr>
+<tr><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td></tr>
+<tr><td align="center">15</td><td align="center">16</td>
+<td align="center" width="120" height="100"> <br><img src="edsa.png" width="100%" height="100%" alt=""> <br></td>
+<td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td></tr>
+<tr><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>MARCH 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td></tr>
+<tr><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td></tr>
+<tr><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td></tr>
+<tr><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td></tr>
+<tr><td align="center">29</td><td align="center">30</td><td align="center">31</td><td></td><td></td><td></td><td></td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>APRIL 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td></td><td></td><td></td><td align="center">1</td>
+<td align="center" width="120" height="100"> <br><img src="THU.jpg" width="100%" height="100%" alt=""> <br></td>
+<td align="center" width="120" height="100"> <br><img src="GF.png" width="100%" height="100%" alt=""> <br></td>
+<td align="center" width="120" height="100"> <br><img src="BS.png" width="100%" height="100%" alt=""> <br></td>
+<tr><td align="center"width="120" height="100"> <br><img src="ES.jpg" width="100" height="100" alt="Easter Sunday"><br></td><td align="center">6</td><td align="center">7</td><td align="center">8</td>
+<td align="center" width="120" height="100"> <br><img src="KAGI.jpg" width="100%" height="100%" alt=""> <br></td>
+<td align="center">10</td><td align="center">11</td></tr>
+<tr><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td></tr>
+<tr><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td></tr>
+<tr><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td></td><td></td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>MAY 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td></td><td></td><td></td><td></td>
+<td align="center" width="120" height="100"> <br><img src="LD.jpg" width="100%" height="100%" alt=""> <br></td>
+<td align="center">2</td><td align="center">3</td></tr>
+<tr><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td></tr>
+<tr><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td></tr>
+<tr><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td></tr>
+<tr><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td align="center">31</td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>JUNE 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td></td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td></tr>
+<tr><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td>
+<td align="center" width="120" height="100"> <br><img src="INDI.jpg" width="100" height="100" alt="Independence Day"><br></td><td align="center">13</td></tr>
+<tr><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td></tr>
+<tr><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td></tr>
+<tr><td align="center">28</td><td align="center">29</td><td align="center">30</td><td></td><td></td><td></td><td></td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>JULY 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td></td><td></td><td></td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td></tr>
+<tr><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td></tr>
+<tr><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td></tr>
+<tr><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td></tr>
+<tr><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td align="center">31</td><td></td></tr>
+</table>
+</center>
+
+
+<center>
+<h2>AUGUST 2026</h2>
+<table border="1" cellpadding="5" cellspacing="5" width="90%">
+<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td align="center">1</td></tr>
+<tr><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td></tr>
+<tr><td align="center">9</td><td align="center">10</td><td align="center"width="120" height="100"><br><img src="bday.jpg" width="100" height="100" alt="Birthday"><br></td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td></tr>
+<tr><td align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center"width="120" height="100"><br><img src="ninoy.jpg" width="100" height="100" alt="Ninoy Aquino"><br></td><td align="center">22</td></tr>
+<tr><td align="center">23</td><td align="center"width="120" height="100"><br><img src="nhd.jpg" width="100" height="100" alt="National Heroes Day"><br></td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td></tr>
+<tr><td align="center">30</td><td align="center">31</td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+</center>
+
+<center>
+    <h2>SEPTEMBER 2026</h2>
+    <table border="1" cellpadding="5" cellspacing="5" width="90%">
+    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+    <tr><td></td><td></td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td></tr>
+    <tr><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td></tr>
+    <tr><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td></tr>
+    <tr><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td></tr>
+    <tr><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td></td><td></td><td></td></tr>
+    </table>
+    </center>
+    
+    
+    <center>
+    <h2>OCTOBER 2026</h2>
+    <table border="1" cellpadding="5" cellspacing="5" width="90%">
+    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+    <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+    <tr><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td></tr>
+    <tr><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td></tr>
+    <tr><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td></tr>
+    <tr><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td align="center">31</td></tr>
+    </table>
+    </center>
+    
+    
+    <center>
+    <h2>NOVEMBER 2026</h2>
+    <table border="1" cellpadding="5" cellspacing="5" width="90%">
+    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td><td align="center"width="120" height="100"><br><img src="saint.jpg" width="100" height="100" alt="All Saints Day"><br></td><td align="center"width="120" height="100"><br><img src="souls.jpg" width="100" height="100" alt="All Souls Day"><br></td></tr>
+    <tr><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td></tr>
+    <tr><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td></tr>
+    <tr><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td></tr>
+    <tr><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center"width="120" height="100"><br><img src="boni.jpg" width="100" height="100" alt=" bonifacio day"><br></td></tr>
+    </table>
+    </center>
+    
+    
+    <center>
+    <h2>DECEMBER 2026</h2>
+    <table border="1" cellpadding="5" cellspacing="5" width="90%">
+    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+    <tr><td></td><td></td><td></td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td></tr>
+    <tr><td align="center">5</td><td align="center">6</td><td align="center">7</td>
+    <td align="center"width="120" height="100"><br><img src="ima.jpg" width="100" height="100" alt="Immaculate Conception"><br></td>
+    <td align="center">9</td><td align="center">10</td><td align="center">11</td></tr>
+    <tr><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td></tr>
+    <tr><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td>
+    <td align="center"width="120" height="100"><br><img src="eve.jpg" width="100" height="100" alt="Christmas Eve"><br></td>
+    <td align="center"width="100" height="100"><br><img src="chrismas.jpg" width="100" height="100" alt="Christmas Day"><br></td></tr>
+    <tr><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td>
+    <td align="center"width="100" height="100"><br><img src="rizal.jpg" width="100" height="100" alt="Rizal Day"><br></td>
+    <td align="center"width="100" height="100"><br><img src="yearend.jpg" width="100" height="100" alt="New Year's Eve"><br></td>
+    <td></td></tr>
+    </table>
+    </center>
+
+<!-- POPUP -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2>Activity Output</h2>
+
+<p>Insert your activity code here.</p>
+
+</div>
+
+</div>
+
+<script>
+
+/* GENERATE BUTTONS */
+
+function generateButtons(container,total){
+
+let div=document.getElementById(container)
+
+for(let i=1;i<=total;i++){
+
+let btn=document.createElement("button")
+
+btn.innerText="Activity "+i
+
+btn.onclick=function(){openModal(i)}
+
+div.appendChild(btn)
+
+}
+
+}
+
+generateButtons("prelim",9)
+generateButtons("midterm",10)
+generateButtons("css1",28)
+generateButtons("css2",21)
+generateButtons("js",10)
+
+/* MODAL */
+
+function openModal(){
+
+document.getElementById("modal").style.display="block"
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").style.display="none"
+
+}
+
+</script>
+
+</body>
+</html>
