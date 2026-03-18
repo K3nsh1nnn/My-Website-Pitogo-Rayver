@@ -39,7 +39,7 @@ background-attachment:fixed;
 background:url("BG.jpg");
 background-repeat:no-repeat;
 background-position:center; 
-background-size:cover;">
+background-size:cover;
 
 }
 /* NAVIGATION BAR */
@@ -481,3 +481,13 @@ transition:0.3s;
 transform:scale(1.1);
 box-shadow:0 10px 25px rgba(0,0,0,0.7);
 }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6b5b95;
+    letter-spacing: 1px;
+    cursor: default;
+    user-select: none; 
+}
+
